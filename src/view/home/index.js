@@ -2,6 +2,7 @@ import { useEffect, useState} from'react'
 import { webGetListApi } from'../../api/system'
 import { Col, Row } from 'antd';
 import './index.less'
+import Item from './components/Item'
 
 function Home(){
   let [pageParam,setPageParam] = useState({
@@ -9,10 +10,16 @@ function Home(){
     pageIndex:1,
     pageSize:10,
   }) 
+  let [dataList,setDataList] = useState([])
 
   useEffect(() => {
     webGetListApi(pageParam).then(res=>{
       console.log(res);
+      if(res.code == 0){
+        console.log(res.data);
+        setDataList(res.data.list)
+      }
+      
     })
   
     return () => {
@@ -22,9 +29,13 @@ function Home(){
   
   return (
     <div className='contentList'>
-      <Row>
-        <Col lg={{span:20,offset:2}} style={{backgroundColor:'#ccc'}}>
-          
+      <Row justify="center">
+        <Col lg={{span:16}} md={24} sm={24} xs={24} >
+          {
+            dataList.map((item,index)=>{
+              return <Item item={item} key={index}/>
+            })
+          }
         </Col>
       </Row>
     </div>

@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import Router from './router/index'
-import './assets/css/index.css'
 import 'antd/dist/antd.css';
+import './assets/css/font/result.css'
+import './assets/css/index.css'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

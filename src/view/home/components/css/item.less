@@ -1,0 +1,31 @@
+
+.home-item{
+  cursor: pointer;
+  padding: 0 16px 8px 16px;
+  &:hover{
+    background-color: rgba(136, 135, 135, 0.1);
+  }
+  .item-time{
+    margin-bottom: 4px;
+    .ant-divider-inner-text{
+      color: #777;
+    }
+  }
+  .item-title{
+    display: flex;
+    >div{
+      &:nth-child(1){
+        width: 0;
+        flex: 1;
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+      &:nth-child(2){
+        color: #777;
+      }
+    }
+  }
+
+}
