@@ -2,8 +2,12 @@
 
 let constantRouterMap = [
   {
-    path: '/',
+    path: '/home',
     component: () => import('../view/home'),
+  },
+  {
+    path: '/article/:articleId',
+    component: () => import('../view/article'),
   },
   // {
   //   path: '/',
