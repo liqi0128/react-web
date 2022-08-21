@@ -14,7 +14,18 @@ code {
     monospace;
 }
 html,body,#root{
-  height: 100vh;
+  /* height: 100%; */
 }
 
+#loading{
+  position:fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background-color:rgba(105, 104, 104, 0.2)
+}
 

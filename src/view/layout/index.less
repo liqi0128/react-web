@@ -1,0 +1,27 @@
+.layout{
+  height:100%;
+  .layout-main{
+    min-height:calc(100% - 60px);
+    padding-top:60px;
+    position: relative;
+    .backToTop{
+      position: fixed;
+      right: 20px;
+      bottom: 10px;
+      width: 42px;
+      height: 42px;
+      background-color: rgba(51, 50, 50, 0.5);
+      color: #ffffff;
+      border-radius: 50%;
+      font-size: 25px;
+      cursor: pointer;
+      text-align: center;
+      &:hover:before {
+        display: block;
+        font-size: 12px;
+        content: '回顶部';
+        line-height: 42px;
+      }
+    }
+  }
+}
